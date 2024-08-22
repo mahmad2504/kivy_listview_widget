@@ -1,0 +1,46 @@
+
+
+
+<MainScreen>:
+	list_box: lb
+	BoxLayout:
+		orientation: 'vertical'
+		canvas:
+			Color:
+				rgba: (0,0,0,1)
+			Rectangle:
+				size: self.size
+				pos: 0,0
+		Label:
+			text: "Select Option"
+			size_hint: (1,.1)
+			color: 1,1,1,1
+			canvas.before:
+				Color:
+					rgba: 0, 0, 0, 1
+				Rectangle:
+					pos: self.pos
+					size: self.size
+				
+        ScrollView:
+			size_hint: (1,.8)
+			pos_hint: {'center_x': .5, 'top': .8}
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,1
+                Rectangle:
+                    size: self.size
+                    #pos: 0,0
+
+            ListBox:
+                id: lb
+		Button:
+			size_hint: (1,.1)
+			pos_hint: {'center_x': .5, 'top': .8}
+			text: 'Save'
+			on_release: root.on_save()
+		
+	
+				
+				
+			
